@@ -75,7 +75,7 @@ fun mainScreen() {
                     // Render the second screen content
                     secondScreen { updatedVisibility ->
                         boxVisibility = updatedVisibility
-                        currentScreen = Navi.Main
+
                     }
                 }
             }
