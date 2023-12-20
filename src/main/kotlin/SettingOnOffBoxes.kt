@@ -1,6 +1,4 @@
-import androidx.compose.material.Button
-import androidx.compose.material.Text
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
 
 @Composable
 fun secondScreen(onToggleMainScreen: (List<Boolean>) -> Unit) {
