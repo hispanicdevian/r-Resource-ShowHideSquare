@@ -8,6 +8,7 @@ fun secondScreen(onToggleMainScreen: (List<Boolean>) -> Unit) {
         onToggleMainScreen(it)
     }
 }
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////// Hide/Show Button
 @Composable
 fun buttonToToggleVisibility(onToggle: (List<Boolean>) -> Unit) {
