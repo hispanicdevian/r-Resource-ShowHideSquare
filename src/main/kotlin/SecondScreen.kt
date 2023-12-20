@@ -6,5 +6,3 @@ fun secondScreen(onToggleMainScreen: (List<Boolean>) -> Unit) {
         onToggleMainScreen(it)
     }
 }
-
-
