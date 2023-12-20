@@ -9,16 +9,4 @@ fun secondScreen(onToggleMainScreen: (List<Boolean>) -> Unit) {
     }
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////// Hide/Show Button
-@Composable
-fun buttonToToggleVisibility(onToggle: (List<Boolean>) -> Unit) {
-    Button(
-        onClick = {
-/////////////////////////////////////////////////////////////////////////////////// Toggles visibility for the first box
-            val updatedVisibility = listOf(false, true, true, true) // Update this as needed
-            onToggle(updatedVisibility)
-        }
-    ) {
-        Text(text = "Toggle Box 1")
-    }
-}
+
