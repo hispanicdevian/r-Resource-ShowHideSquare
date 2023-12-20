@@ -31,7 +31,7 @@ fun mainScreen() {
             ) {
                 Spacer(modifier = Modifier.height(15.dp))
 
-                // Show the Box only if it's visible
+////////////////////////////////////////////////////////////////////////////////////// Show the Box only if it's visible
                 for (index in titleList.indices) {
                     if (boxVisibility[index]) {
                         Box(
@@ -66,7 +66,7 @@ fun mainScreen() {
                 }
             }
         }
-        // Call the second screen passing a function to toggle visibility
+///////////////////////////////////////////////////////// Call the second screen passing a function to toggle visibility
         secondScreen { updatedVisibility ->
             boxVisibility = updatedVisibility
         }
