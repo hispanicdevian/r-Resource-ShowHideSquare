@@ -20,7 +20,7 @@ fun magicButton(visibilityList: List<Boolean>, onToggle: (List<Boolean>) -> Unit
                         onToggle(updatedList)
                     }
                 ) {
-                    Text(text = if (visibilityList[index]) "OFF" else "ON")
+                    Text(text = if (visibilityList[index]) "ON" else "OFF")
                 }
             }
             Spacer(modifier = Modifier.height(12.dp))
