@@ -13,7 +13,17 @@ import androidx.compose.ui.unit.dp
 fun mainScreen() {
     var currentScreen by remember { mutableStateOf<Navi>(Navi.Main) }
     val titleList = listOf("Square 0", "Square 1", "Square 2", "Square 3")
-    val visibilityList = remember { mutableStateListOf(true, true, true, true) }
+    val visibilityList = remember {
+        val currentState = LSHandler.lSSTFile() // Load the state from the file
+
+        if (currentState.isNotEmpty()) {
+            // If the loaded state is not empty, parse it and use it
+            currentState.split(",").map { it.toBoolean() }.toMutableList()
+        } else {
+            // If the file is empty or couldn't be read, use a default state
+            mutableStateListOf(true, true, true, true)
+        }
+    }
 
     Box(
         modifier = Modifier.fillMaxSize(),
