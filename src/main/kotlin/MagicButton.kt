@@ -1,17 +1,29 @@
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////// Hide/Show Button
 @Composable
-fun buttonToToggleVisibility(onToggle: (List<Boolean>) -> Unit) {
-    Button(
-        onClick = {
-/////////////////////////////////////////////////////////////////////////////////// Toggles visibility for the first box
-            val updatedVisibility = listOf(false, true, true, true) // Update this as needed
-            onToggle(updatedVisibility)
+fun magicButton(visibilityList: List<Boolean>, onToggle: (List<Boolean>) -> Unit) {
+    Column {
+        repeat(4) { index ->
+            Row {
+                Button(
+                    onClick = {
+                        val updatedList = visibilityList.toMutableList()
+                        updatedList[index] = !updatedList[index]
+                        onToggle(updatedList)
+                    }
+                ) {
+                    Text(text = if (visibilityList[index]) "OFF" else "ON")
+                }
+            }
+            Spacer(modifier = Modifier.height(12.dp))
         }
-    ) {
-        Text(text = "Toggle Box 1")
     }
 }

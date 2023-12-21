@@ -1,8 +1,8 @@
 import androidx.compose.runtime.Composable
 
 @Composable
-fun secondScreen(onToggleMainScreen: (List<Boolean>) -> Unit) {
-    buttonToToggleVisibility {
-        onToggleMainScreen(it)
+fun secondScreen(visibilityList: List<Boolean>, onToggle: (List<Boolean>) -> Unit) {
+    magicButton(visibilityList) { updatedList ->
+        onToggle(updatedList)
     }
 }
