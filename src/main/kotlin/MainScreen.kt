@@ -13,6 +13,7 @@ import androidx.compose.ui.unit.dp
 fun mainScreen() {
     var currentScreen by remember { mutableStateOf<Navi>(Navi.Main) }
     val titleList = listOf("Square 0", "Square 1", "Square 2", "Square 3")
+
     val visibilityList = remember {
         val currentState = LSHandler.lSSTFile() // Load the state from the file
 
@@ -90,4 +91,3 @@ fun mainScreen() {
         }
     }
 }
-
