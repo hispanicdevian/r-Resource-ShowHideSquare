@@ -9,11 +9,11 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import custom_resources.ErgoGray
-import custom_resources.NbtColor
+import custom_resources.Purple80
 import engine_logic.LSHandler
 import engine_logic.Navi
 import onoff_boxes.onOffBoxes
@@ -39,17 +39,17 @@ fun onOffBoxesSettings(
                     verticalArrangement = Arrangement.Top
                 ) {
                     Button(modifier = Modifier.fillMaxWidth(),
-                        colors = ButtonDefaults.buttonColors(ErgoGray),
+                        colors = ButtonDefaults.buttonColors(Color.DarkGray),
                         onClick = { currentScreen = Navi.Settings }
                     ) {
-                        Text("Done", color = NbtColor, fontSize = 25.sp, fontWeight = FontWeight.Bold)
+                        Text("Done", color = Purple80, fontSize = 25.sp, fontWeight = FontWeight.Bold)
                     }
                 }
             }
 //////////////////////////////////////////////////////////// UI Container
             Box(
                 modifier = Modifier.fillMaxSize().padding(top = 60.dp)
-                    .background(ErgoGray)
+                    .background(Color.DarkGray)
             ) {
                 Row(
                     modifier = Modifier

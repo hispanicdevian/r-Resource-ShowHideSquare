@@ -17,7 +17,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import custom_resources.ErgoGray
 import engine_logic.LSHandler
 import onoff_boxes.onOffBoxes
 
@@ -45,7 +44,7 @@ fun settingScreen() {
                 )
                 .padding(5.dp)
                 .size(300.dp)
-                .background((ErgoGray), shape = AbsoluteRoundedCornerShape(5.dp)),
+                .background((Color.DarkGray), shape = AbsoluteRoundedCornerShape(5.dp)),
             contentAlignment = Alignment.Center
         ) {
             val itemsList = listOf("On/Off")
